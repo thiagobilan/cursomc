@@ -9,4 +9,6 @@ import com.bilangieri.cursomc.domain.Categoria;
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 	
 	
+	
+	
 }
