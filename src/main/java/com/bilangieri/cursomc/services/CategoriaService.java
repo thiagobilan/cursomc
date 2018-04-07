@@ -1,5 +1,6 @@
 package com.bilangieri.cursomc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,7 @@ public class CategoriaService {
 	private CategoriaRepository repo;
 
 	public Categoria find(Integer id) {
-
 		Optional<Categoria> obj = repo.findById(id);
-
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"Categoria nao Encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
 
@@ -43,5 +42,9 @@ public class CategoriaService {
 		} catch (DataIntegrityViolationException e) {
 			throw new DataIntegrityException("Não é possivel excluir essa categoria pois ela tem produtos");
 		}
+	}
+
+	public List<Categoria> findAll() {
+		return repo.findAll();
 	}
 }
