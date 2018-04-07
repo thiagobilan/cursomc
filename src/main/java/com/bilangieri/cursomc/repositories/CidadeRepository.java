@@ -5,11 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bilangieri.cursomc.domain.Cidade;
 
-
 @Repository
 public interface CidadeRepository extends JpaRepository<Cidade, Integer> {
-	
-	
-	
-	
+
 }
