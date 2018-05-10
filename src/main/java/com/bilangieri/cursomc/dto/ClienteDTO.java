@@ -20,7 +20,7 @@ public class ClienteDTO implements Serializable {
 	
 	@NotEmpty(message="O preenchimento é obrigatório")
 	@Email(message="Email inválido")
-	private String eMail;
+	private String email;
 
 	public ClienteDTO() {
 
@@ -29,7 +29,7 @@ public class ClienteDTO implements Serializable {
 	public ClienteDTO(Cliente obj) {
 		this.id = obj.getId();
 		this.nome = obj.getNome();
-		this.eMail = obj.geteMail();
+		this.email = obj.getemail();
 	}
 
 	public Integer getId() {
@@ -48,12 +48,12 @@ public class ClienteDTO implements Serializable {
 		this.nome = nome;
 	}
 
-	public String geteMail() {
-		return eMail;
+	public String getemail() {
+		return email;
 	}
 
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public void setemail(String email) {
+		this.email = email;
 	}
 
 }

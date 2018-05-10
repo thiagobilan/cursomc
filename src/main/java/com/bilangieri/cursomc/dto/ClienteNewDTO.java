@@ -20,7 +20,7 @@ public class ClienteNewDTO implements Serializable {
 	
 	@NotEmpty(message="O preenchimento é obrigatório")
 	@Email(message="Email inválido")
-	private String eMail;
+	private String email;
 	
 	@NotEmpty(message="O preenchimento é obrigatório")
 	private String cpfOuCnpj;
@@ -59,12 +59,12 @@ public class ClienteNewDTO implements Serializable {
 		this.nome = nome;
 	}
 
-	public String geteMail() {
-		return eMail;
+	public String getemail() {
+		return email;
 	}
 
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public void setemail(String email) {
+		this.email = email;
 	}
 
 	public String getCpfOuCnpj() {

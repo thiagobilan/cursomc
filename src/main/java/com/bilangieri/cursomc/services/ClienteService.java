@@ -75,12 +75,12 @@ public class ClienteService {
 
 	public Cliente fromDTO(ClienteDTO objDTO) {
 
-		return new Cliente(objDTO.getId(), objDTO.getNome(), objDTO.geteMail(), null, null);
+		return new Cliente(objDTO.getId(), objDTO.getNome(), objDTO.getemail(), null, null);
 	}
 
 	public Cliente fromDTO(ClienteNewDTO objDTO) {
 
-		Cliente cli = new Cliente(null, objDTO.getNome(), objDTO.geteMail(), objDTO.getCpfOuCnpj(),
+		Cliente cli = new Cliente(null, objDTO.getNome(), objDTO.getemail(), objDTO.getCpfOuCnpj(),
 				TipoCliente.toEnum(objDTO.getTipo()));
 		Cidade cid = new Cidade(objDTO.getCidadeId(), null, null);
 		Endereco end = new Endereco(null, objDTO.getLogradouro(), objDTO.getNumero(), objDTO.getComplemento(),
@@ -98,7 +98,7 @@ public class ClienteService {
 
 	private void updateData(Cliente newObj, Cliente obj) {
 		newObj.setNome(obj.getNome());
-		newObj.seteMail(obj.geteMail());
+		newObj.setemail(obj.getemail());
 
 	}
 
